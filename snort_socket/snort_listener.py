@@ -37,7 +37,6 @@ def start_recv():
         parsed_msg = alert.AlertPkt.parser(data)
         if parsed_msg:
             yield parsed_msg
-            print('[X] Snort Alert: ' + parsed_msg)
 
 if __name__ == '__main__':
     start_recv()
