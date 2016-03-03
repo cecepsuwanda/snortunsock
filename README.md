@@ -4,6 +4,14 @@ A Python listener to capture [Snort](https://www.snort.org/) event via the UNIX 
 
 Snortunsock can parse and show the alert message.
 
+# Installation
+
+Install Snortunsock from [PyPI](https://pypi.python.org/pypi/snortunsock):
+
+```
+$ pip install snortunsock
+```
+
 # Usage
 
 The basic usage
@@ -11,7 +19,6 @@ The basic usage
 ```python
 
 import dpkt
-import socket
 
 from snortunsock import snort_listener
 

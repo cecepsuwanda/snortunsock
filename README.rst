@@ -5,6 +5,15 @@ A Python listener to capture `Snort`_ event via the UNIX Socket output.
 
 Snortunsock can parse and show the alert message.
 
+Installation
+============
+
+Install Snortunsock from `PyPI`_:
+
+::
+
+    $ pip install snortunsock
+
 Usage
 =====
 
@@ -14,7 +23,6 @@ The basic usage
 
 
     import dpkt
-    import socket
 
     from snortunsock import snort_listener
 
@@ -41,4 +49,5 @@ LICENSE
 Apache License, Version 2.0
 
 .. _Snort: https://www.snort.org/
+.. _PyPI: https://pypi.python.org/pypi/snortunsock
 .. _dpkt: https://pypi.python.org/pypi/dpkt
