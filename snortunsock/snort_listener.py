@@ -19,9 +19,7 @@ def start_recv(sockfile=None):
     unsock = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
     unsock.bind(SOCKFILE)
     print("Unix socket start listening...")
-    i = 0
     while True:
-        i += 1
         data = unsock.recv(BUFSIZE)
         parsed_msg = alert.AlertPkt.parser(data)
         if parsed_msg:
