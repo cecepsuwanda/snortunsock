@@ -23,7 +23,7 @@ def ip_to_str(address):
     return socket.inet_ntop(socket.AF_INET, address)
 
 def main():
-    for msg in snort_listener.start_recv():
+    for msg in snort_listener.start_recv("/tmp/snort_alert"):
         print('alertmsg: %s' % ''.join(msg.alertmsg))
         buf = msg.pkt
 
