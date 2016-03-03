@@ -1,7 +1,7 @@
 import dpkt
 import socket
 
-from snort_socket import snort_listener
+from snortunsock import snort_listener
 
 def mac_addr(address):
     """Convert a MAC address to a readable/printable string
