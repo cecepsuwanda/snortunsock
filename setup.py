@@ -11,18 +11,19 @@ requirements = []
 # PyPI Readme
 long_description = open('README.rst').read()
 
-__version__ = '0.0.1'
-__author__ = 'John Lin'
-__email__ = 'linton.tw@gmail.com'
+# Pull in the package
+package = __import__(package_name)
+
+package_version = package.__version__
 
 
 setup(name=package_name,
-      version=__version__,
+      version=package_version,
       description=description,
       long_description=long_description,
-      url='https://github.com/John-Lin/snortunsock',
-      author=__author__,
-      author_email=__email__,
+      url=package.__url__,
+      author=package.__author__,
+      author_email=package.__author_email__,
       license='Apache License, Version 2.0',
       packages=['snortunsock'],
       classifiers=[
