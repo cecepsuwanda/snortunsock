@@ -3,6 +3,7 @@ import socket
 
 from snortunsock import snort_listener
 
+
 def mac_addr(address):
     """Convert a MAC address to a readable/printable string
        Args:
@@ -21,6 +22,7 @@ def ip_to_str(address):
         str: Printable/readable IP address
     """
     return socket.inet_ntop(socket.AF_INET, address)
+
 
 def main():
     for msg in snort_listener.start_recv("/tmp/snort_alert"):
