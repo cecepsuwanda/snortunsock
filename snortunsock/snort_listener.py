@@ -1,9 +1,12 @@
 import os
 import socket
+import logging
 
 import alert
 
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 BUFSIZE = alert.AlertPkt._ALERTPKT_SIZE
+
 
 def start_recv(sockfile=None):
     '''Open a server on Unix Domain Socket'''
@@ -18,7 +21,7 @@ def start_recv(sockfile=None):
         os.unlink(SOCKFILE)
     unsock = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
     unsock.bind(SOCKFILE)
-    print("Unix socket start listening...")
+    logging.warning('Unix socket start listening...')
     while True:
         data = unsock.recv(BUFSIZE)
         parsed_msg = alert.AlertPkt.parser(data)
