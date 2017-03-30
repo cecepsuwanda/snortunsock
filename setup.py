@@ -5,11 +5,11 @@ except ImportError:
 
 package_name = 'snortunsock'
 description = 'A Python listener to capture Snort event via the UNIX Socket output'
-readme = open('README.rst').read()
+#readme = open('README.rst').read()
 requirements = []
 
 # PyPI Readme
-long_description = open('README.rst').read()
+#long_description = open('README.rst').read()
 
 # Pull in the package
 package = __import__(package_name)
