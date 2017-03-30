@@ -35,7 +35,7 @@ setup(name=package_name,
         'Programming Language :: Python',
         'Topic :: Utilities',
         'Topic :: Software Development :: Libraries :: Python Modules',
-         'Programming Language :: Python :: 2.7',
+         'Programming Language :: Python :: 3',
       ],
       install_requires=requirements,
       zip_safe=False)
