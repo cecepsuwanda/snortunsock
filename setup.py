@@ -1,5 +1,8 @@
 from distutils.core import setup
 
+package_name = 'snortunsock'
+description = 'A Python listener to capture Snort event via the UNIX Socket output'
+
 package = __import__(package_name)
 
 package_version = package.__version__
